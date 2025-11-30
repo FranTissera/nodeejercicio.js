@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contador de caracteres</title>
+</head>
+<body>
+  <h3>Escribe tu texto:</h3>
+  <textarea id="miTextarea" rows="5" cols="40"></textarea>
+  <p>Caracteres escritos: <span id="contador">0</span></p>
+
+  <script>
+    // Seleccionamos el textarea y el span del contador
+    const textarea = document.getElementById("miTextarea");
+    const contador = document.getElementById("contador");
+
+    // Evento que se dispara cada vez que se escribe en el textarea
+    textarea.addEventListener("input", function() {
+      let cantidad = textarea.value.length;
+      contador.textContent = cantidad;
+    });
+  </script>
+</body>
+</html>
